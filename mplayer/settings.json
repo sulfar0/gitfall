@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Creep",
+        "artist": "Radiohead",
+        "cover": "https://upload.wikimedia.org/wikipedia/en/5/55/Radioheadthebends.png",
+        "src": "asset/audio/radiohead-creep.mp3"
+    },
+    {
+        "title": "Exit Music (For a Film)",
+        "artist": "Radiohead",
+        "cover": "https://i.scdn.co/image/ab67616d0000b273e36490452cad52c3e2c0b6e8",
+        "src": "asset/audio/radiohead-exitmusic.mp3"
+    },
+    {
+        "title": "Let Down",
+        "artist": "Radiohead",
+        "cover": "https://berisikradio.id/wp-content/uploads/2019/02/Radiohead.jpg",
+        "src": "asset/audio/radiohead-letdown.mp3"
+    },
+    {
+        "title": "Mind Game",
+        "artist": "Sickick",
+        "cover": "https://w0.peakpx.com/wallpaper/842/862/HD-wallpaper-sickick-beatbox-electro-hacker-king-mask-mortal-music-skull-trap.jpg",
+        "src": "asset/audio/sickick-mindgames.mp3"
+    },
+    {
+        "title": "Again",
+        "artist": "Xxxtentacion",
+        "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Xxxtentacion_%28cropped%29.jpg/250px-Xxxtentacion_%28cropped%29.jpg",
+        "src": "asset/audio/xxxtentacion-again.mp3"
+    }
+]

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForTune</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4b4803957e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">ForTune</div>
+        <nav>
+            <div class="menu">
+            <a href="#" class="active"><i class="fa-solid fa-house"></i>  Home</a>
+            <a href="#"><i class="fa-solid fa-bars"></i>  Categories</a>
+            <a href="#"><i class="fa-solid fa-user"></i>  Artists</a>
+            
+            </div>
+            <div class="playlist">
+            <div class="playlist-title"><i class="fa-solid fa-bars"></i>  Playlists</div>
+            <a href="#"><i class="fa-solid fa-wind"></i>  Vibes & Chill</a>
+            <a href="#"><i class="fa-solid fa-sun"></i>  Morning Boost</a>
+            <a href="#"><i class="fa-solid fa-bolt"></i> Rhythm & Energy</a>
+            </div>
+        </nav>
+        <a href="#" class="logout"><i class="fa-solid fa-door-open"></i> Logout</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a song...">
+            </div>
+  
+            <div class="profile">
+                <img src="https://image.idntimes.com/post/20231112/loki-episode-6-f330ed93c7cdbe9b9289215bbb898857.jpg" alt="User Profile" class="profile-pic">
+                <div class="profile-info">
+                    <span class="name">Jumping Squirrel</span>
+                    <span class="badge">Premium</span>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <div class="carousel">
+                <div class="nav-btns-left">
+                    <button id="prevBtn">&#10094;</button>
+                </div>
+                <div class="slides">
+                    <div class="slide active" style="background-image:url('https://cdn-images.dzcdn.net/images/cover/615bb58abf2e5fd86741ed5311d364b1/0x1900-000000-80-0-0.jpg')">
+                        <div class="meta">
+                            <h3>SexyBack</h3>
+                            <p>Justin Timberlake</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoaNtyhNPQz5ZmlWGMriYQKWhA8rRuXlXP8g&s')">
+                        <div class="meta">
+                            <h3>SWIM</h3>
+                            <p>Chase Atlantic</p>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7C80YL6UmcIksWnGwAuInT4WFzuKXe23UNQ&s')">
+                        <div class="meta">
+                            <h3>Daylight</h3>
+                            <p>David Kushner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-btns-right">
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <button class="active">All</button>
+            <button>Relax</button>
+            <button>Sad</button>
+            <button>Party</button>
+            <button>Romance</button>
+            <button>Energetic</button>
+            <button>Jazz</button>
+            <button>Alternative</button>
+            <button>Classical</button>
+            <button>Pop</button>
+            <button>Rock</button>
+            <button>Hip Hop</button>
+        </section>
+
+        <section class="popular">
+            <h2>Popular Songs</h2>
+            <div id="playlist" class="songs">
+                <!-- Playlist dari JS -->
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Player -->
+<footer class="player">
+    <div class="song-info">
+        <img id="current-cover" src="https://via.placeholder.com/50" alt="">
+        <div class="text-info">
+            <p id="current-title">Title</p>
+            <small id="current-artist">Artist</small>
+        </div>
+    </div>
+    <div class="player-controls">
+        <div class="controls">
+            <button id="prev">⏮</button>
+            <button id="play">▶</button>
+            <button id="next">⏭</button>
+        </div>
+        <div class="progress-container">
+            <input type="range" id="progress" value="0" max="100">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+        <div class="extra-controls">
+            <button id="like-btn"><i class="fa-regular fa-heart"></i></button>
+            <button id="shuffle"><i class="fa-regular fa-shuffle"></i></button>
+            <button id="repeat"><i class="fa-regular fa-repeat"></i></button>
+        </div>
+    </div>  
+    <div class="volume-control">
+        <button id="volume-btn">🔊</button>
+        <input type="range" id="volume" value="100" max="100">
+    </div>
+    <audio id="audio"></audio>
+    
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

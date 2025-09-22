@@ -1,0 +1,388 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: white;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */ 
+.sidebar {
+    background: #1e1e1e;
+    padding: 20px;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: orange;
+    text-align: center;
+}
+
+.sidebar nav {
+    flex-grow: 1;
+}
+
+.sidebar nav .menu a {
+    display: block;
+    padding: 25px 0 0 18px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.sidebar nav .playlist a {
+    display: block;
+    padding: 25px 0 0 33px;
+    color: #bbb;
+    text-decoration: none;
+}
+
+.sidebar nav a.active, .sidebar nav a:hover {
+    color: white;
+}
+
+.sidebar .playlist-title {
+    margin-top: 25px;
+    padding-left: 18px;
+    font-weight: bold;
+}
+
+.sidebar .logout {
+    color: red;
+    text-decoration: none;
+    margin-bottom: 120px;
+    margin-left: 18px;
+    display: block;
+}
+
+/* Main */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  color: #fff;
+}
+
+/* Search bar */
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: left;
+  margin: 0 10px;
+}
+
+.search-bar input {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+/* Profile section */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.profile-info .name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.profile-info .badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: #035c4a;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: #fff;
+  margin-top: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Categories */
+.categories {
+    margin: 65px 0 0 40px;
+}
+
+.categories button {
+    background: #333;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.categories button.active {
+    background: orange;
+}
+
+/* Songs */
+
+.popular {
+    margin: 20px 0 100px 20px;
+} 
+
+.popular .songs {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #333;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Player */
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.player .controls {
+    margin-left: auto;
+}
+
+.player .extra-controls {
+    margin-right: auto;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.song-info .text-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.song-info img {
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.progress-container {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#progress {
+    width: 100%;
+    appearance: none;
+    height: 5px;
+    border-radius: 5px;
+    background: #333;
+    cursor: pointer;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.content{
+    background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    padding:22px;
+    border-radius:18px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:18px
+}
+
+.carousel {
+    position: relative;
+    min-height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slides {
+    width: 100%;
+    height: 320px;
+    position: relative;
+    display: flex;
+    justify-content: center; /* slide utama di tengah */
+    align-items: center;
+    perspective: 1200px;
+}
+
+.slide {
+    position: absolute;
+    top: 5%;
+    left: 30%; /* mulai dari tengah */
+    transform: translateX(-50%); /* geser balik biar pas di tengah */
+    width: 360px;
+    height: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 18px;
+    color: white;
+    cursor: pointer;
+    transition: transform .45s, opacity .3s;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+    background-size: cover;
+    background-position: center;
+}
+
+.slide .meta{
+    backdrop-filter:blur(6px);
+    background:rgba(0,0,0,0.35);
+    padding:10px 12px;
+    border-radius:10px
+}
+
+.slide.prev{
+    transform:translateX(-260px) scale(.86) rotateY(18deg);
+    opacity:.6;
+    z-index:1
+}
+
+.slide.next{
+    transform:translateX(260px) scale(.86) rotateY(-18deg);
+    opacity:.6;
+    z-index:1
+}
+
+.slide.active{
+    transform:translateX(0) scale(1);
+    z-index:3;
+    opacity:1
+}
+
+.nav-btns-left {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 10;
+}
+
+.nav-btns-left button{
+    background:rgba(255,255,255,0.06);
+    border:0;color:#fff;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+    z-index: 10;
+}
+
+.nav-btns-right {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-btns-right button{
+    background:rgba(255,255,255,0.06);
+    border:0;color:#fff;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+    z-index: 10;
+}
+
+.element-with-scrollbars::-webkit-scrollbar {
+    display: none;
+}
